@@ -1,0 +1,14 @@
+name: Disable telemetry
+author: "RikthePixel"
+description: "Disables most telemetry"
+branding:
+  icon: "lock"
+  color: "yellow"
+inputs:
+  method:
+    description: "The authentication method to use (universal, oidc, aws-iam)"
+    required: false
+    default: "universal"
+runs:
+  using: "node24"
+  main: "dist/index.cjs"

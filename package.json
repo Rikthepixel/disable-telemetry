@@ -1,0 +1,35 @@
+{
+  "name": "disable-telemetry",
+  "version": "1.0.0",
+  "description": "Github action that removes most telemetry",
+  "main": "dist/index.cjs",
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "check:format": "prettier --check ./src"
+  },
+  "bugs": {
+    "url": "https://github.com/Rikthepixel/disable-telemetry"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RikThePixel/disable-telemetry"
+  },
+  "keywords": [],
+  "author": "RikThePixel",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/exec": "^3.0.0",
+    "@actions/io": "^3.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "prettier": "^3.6.2",
+    "tsdown": "^0.23.7",
+    "typescript": "^5.9.3"
+  },
+  "volta": {
+    "node": "24.22.3"
+  }
+}
