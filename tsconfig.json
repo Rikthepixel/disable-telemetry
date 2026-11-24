@@ -1,0 +1,13 @@
+{
+  "references": [
+    { "path": "./tsconfig.action.json" },
+    { "path": "./tsconfig.config.json" }
+  ],
+  "files": [],
+  "compilerOptions": {
+    "incremental": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+name: CI
+on:
+    push:
+        branches: [main]
+        paths-ignore:
+            - "README.md"
+    pull_request:
+        branches: [main]
+        paths-ignore:
+            - "README.md"
+
+permissions:
+    pull-requests: write
+    contents: write
+
+jobs:
+    check: 
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v5
+              with:
+                  node-version: 24.x
+            - run: npm ci
+            - run: npm run check:format
+
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v5
+            - uses: actions/setup-node@v5
+              with:
+                  node-version: 24.x
+            - run: npm ci
+            - run: npm run build
